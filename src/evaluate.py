@@ -34,7 +34,13 @@ def evaluate_model():
     plt.title('Error Distribution')
     plt.xlabel('Prediction Error')
     plt.ylabel('Frequency')
-    plt.savefig('error_distribution.png')
+    
+    # Create output directory for plots
+    output_dir = 'plots'
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+    
+    plt.savefig(os.path.join(output_dir, 'error_distribution.png'))
     plt.show()
 
 if __name__ == '__main__':
