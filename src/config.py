@@ -1,9 +1,11 @@
 # src/config.py
 
+# Define paths relative to the project root
 DATA_PATH = "data/raw/"
 PROCESSED_PATH = "data/processed/"
 MODEL_PATH = "models/model.pkl"
-SHAP_PATH = "models/shap_values.pkl"
+
+# Define model and data parameters
 SEED = 42
 TEST_SIZE = 0.2
-TARGET = "fatigue strength"  # Ensure this matches the column name in your dataset
+TARGET = "fatigue" # This must match the cleaned column name
